@@ -1,0 +1,51 @@
+.filter-by-age {
+  color: #6c757d;
+}
+.filter-by-age .title {
+  align-self: center;
+}
+.filter-by-age .age-slider {
+  width: 85%;
+}
+.users-list {
+  padding: 40px 60px;
+}
+.users-list .image-col {
+  text-align: center;
+}
+.users-list .image-col .image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.users-list .text-col {
+  margin: auto 0px;
+}
+.users-list .actions-col {
+  text-align: center;
+  margin: auto 0px;
+}
+.users-list .actions-col .action {
+  line-height: 1;
+}
+.users-list .actions-col .icon {
+  font-size: 20px;
+}
+.side-bar {
+  background: #252223;
+}
+.side-bar .nav-link {
+  color: #fff;
+  font-size: 28px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

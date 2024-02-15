@@ -1,0 +1,308 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Editar Alumno</h1>
+      </div>
+      <!-- <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">User Profile</li>
+              </ol>
+          </div> -->
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="content">
+      <div class="page-content card card-primary card-outline">
+        <div class="edit-page content">
+          <div class="page-content">
+            <div class="row">
+              <div class="col col-md-10 mx-auto">
+                <form class="edit-form" [formGroup]="alumnoForm" novalidate (ngSubmit)="onSubmit(alumnoForm.value)">
+                  <div class="row">
+                    <div style="text-align: right; flex: auto; margin-right: 20%">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col col-md-6">
+                        <div class="form-group">
+                          <mat-form-field class="input-style">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput placeholder="Nombre" class="form-control" formControlName="nombre" />
+                          </mat-form-field>
+                          <ng-container *ngFor="let validation of validationMessages.nombre">
+                            <mat-error *ngIf="
+                        alumnoForm.get('nombre').hasError(validation.type) &&
+                        (alumnoForm.get('nombre').dirty || alumnoForm.get('nombre').touched)
+                      ">
+                              {{ validation.message }}</mat-error>
+                          </ng-container>
+                        </div>
+                      </div>
+
+                      <div class="col col-md-6">
+                        <div class="form-group">
+                          <mat-form-field class="input-style">
+                            <mat-label>Apellido</mat-label>
+                            <input matInput placeholder="Apellido" class="form-control" formControlName="apellido" />
+                          </mat-form-field>
+                          <ng-container *ngFor="let validation of validationMessages.apellido">
+                            <mat-error *ngIf="
+                        alumnoForm.get('apellido').hasError(validation.type) &&
+                        (alumnoForm.get('apellido').dirty || alumnoForm.get('apellido').touched)
+                      ">
+                              {{ validation.message }}</mat-error>
+                          </ng-container>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col col-md-6">
+                        <div class="form-group">
+                          <mat-form-field class="input-style">
+                            <mat-label>Edad</mat-label>
+                            <input matInput type="number" placeholder="Edad" class="form-control"
+                              formControlName="edad" />
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="col col-md-6">
+                        <div class="form-group">
+                          <mat-form-field class="input-style">
+                            <mat-label>DNI</mat-label>
+                            <input matInput type="number" placeholder="DNI" class="form-control"
+                              formControlName="dni" />
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Turno</mat-label>
+                          <mat-select formControlName="turno" [(ngModel)]="selectedValueTurno" multiple>
+                            <mat-option value="M">M</mat-option>
+                            <mat-option value="MM">MM</mat-option>
+                            <mat-option value="T">T</mat-option>
+                            <mat-option value="JC">JC</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Hora Extra</mat-label>
+                          <mat-select formControlName="horaExtra" [(ngModel)]="selectedValueHoraExtra" multiple>
+                            <mat-option value="8hs">8hs</mat-option>
+                            <mat-option value="12:30hs">12:30hs</mat-option>
+                            <mat-option value="17:30hs">17:30hs</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Ciclos</mat-label>
+                          <mat-select formControlName="ciclos" [(ngModel)]="selectedValueCiclo" multiple>
+                            <mat-option value="1D">1D</mat-option>
+                            <mat-option value="2D">2D</mat-option>
+                            <mat-option value="1E">1E</mat-option>
+                            <mat-option value="2E">2E</mat-option>
+                            <mat-option value="1F">1F</mat-option>
+                            <mat-option value="2F">2F</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Colegio</mat-label>
+                          <input matInput placeholder="Colegio" class="form-control" formControlName="colegio" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Telefono</mat-label>
+                          <input matInput placeholder="Telefono" class="form-control" formControlName="telefono" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Telefono Emergencia</mat-label>
+                          <input matInput type="phone" placeholder="Telefono Emergencia" class="form-control"
+                            formControlName="telefonoEmergencia" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Direccion</mat-label>
+                          <input matInput placeholder="Direccion" class="form-control" rows="10"
+                            formControlName="direccion" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Email</mat-label>
+                          <input matInput placeholder="Email" disabled="disabled" class="form-control" formControlName="email" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <mat-divider></mat-divider>
+                  <br />
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group" style="background-color: white">
+                        <mat-form-field class="input-style" style="background-color: white">
+                          <mat-label>Nombre Padre</mat-label>
+                          <input matInput type="text" placeholder="Nombre Padre" class="form-control"
+                            formControlName="nombrePadre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Celular Padre</mat-label>
+                          <input matInput placeholder="Celular Padre" class="form-control" formControlName="celPadre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>DNI Padre</mat-label>
+                          <input matInput type="number" placeholder="DNI Padre" class="form-control"
+                            formControlName="dniPadre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <mat-divider></mat-divider>
+                  <br />
+
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Nombre Madre</mat-label>
+                          <input matInput type="text" placeholder="Nombre Madre" class="form-control"
+                            formControlName="celMadre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Celular Madre</mat-label>
+                          <input matInput placeholder="Celular Madre" class="form-control" formControlName="celPadre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>DNI Madre</mat-label>
+                          <input matInput type="number" placeholder="DNI Madre" class="form-control"
+                            formControlName="dniMadre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="card" *ngFor="let pago of alumno.pagos">
+                      <div class="card-header">{{pago.nombre}}</div>
+                      <div *ngFor="let ciclo of alumno.ciclos">
+                        <div *ngIf="pago.nombre === ciclo">
+                          <div>
+                            <div class="card-body">
+                              Estado: {{pago.estado}}
+                              <br />
+                              <div *ngIf="pago.estado === 'PAGADO'">
+                                FechaPago: {{pago.fechaPago}}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer">
+                            <button mat-button color="warn" [disabled]="pago.estado == 'PAGADO'" (click)="pagar(pago)">
+                              PAGAR
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <mat-list>
+                    <div class="row">
+                      <div class="col col-md-4">
+                        <div class="form-group">
+                          <mat-checkbox placeholder="Habilitado" class="form-control" formControlName="habilitado">
+                            Habilitado
+                          </mat-checkbox>
+                        </div>
+                      </div>
+                    </div>
+                  </mat-list>
+
+                  <div class="row submit-button-container">
+                    <div class="col-md-4">
+                      <button mat-raised-button class="submit-button" color="primary" type="submit"
+                        [disabled]="!alumnoForm.valid">
+                        Guardar
+                      </button>
+                    </div>
+                    <div class="col-md-4">
+                      <button mat-raised-button type="button" class="submit-button" (click)="backClicked()">
+                        Volver
+                      </button>
+                    </div>
+                    <!-- <div class="col-md-4">
+                      <button mat-raised-button type="button" class="submit-button" color="warn"
+                        (click)="eliminar(alumno)">
+                        Eliminar
+                      </button>
+                    </div> -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

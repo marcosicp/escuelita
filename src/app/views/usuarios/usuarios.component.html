@@ -1,0 +1,23 @@
+<div class="content" style="background-color: white; padding: 2%">
+  <div style="display: -webkit-box; margin-bottom: 1%">
+    <button
+      mat-flat-button
+      color="primary"
+      style="margin-right: 8px"
+      (click)="nuevoUsuario()"
+    >
+      Nuevo Usuario
+    </button>
+  </div>
+
+  <ag-grid-angular
+    style="width: 100%; height: 350px"
+    (gridReady)="onGridReady($event)"
+    (rowDoubleClicked)="viewDetails($event)"
+    class="ag-theme-balham"
+    [rowData]="rowData"
+    [animateRows]="true"
+    [columnDefs]="columnDefs"
+  >
+  </ag-grid-angular>
+</div>

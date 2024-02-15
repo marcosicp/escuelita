@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/scss/bootstrap';
+
+@import '~ionicons/css/ionicons.min.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
+@import '~admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
+@import '~admin-lte/dist/css/adminlte.min.css';
+@import '~ag-grid-community/dist/styles/ag-grid.css';
+@import '~ag-grid-community/dist/styles/ag-theme-balham.css';
+@import '~ngx-toastr/toastr';
+
+// ::-webkit-scrollbar {
+//   width: 0px;
+//   background: transparent;
+// }
+
+.create-page {
+  padding: 20px 35px;
+}
+.create-page .page-content {
+  background-color: #fff;
+}
+.create-page .page-content .img-avatar {
+  border-radius: 50%;
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+.create-page .page-content .change-img-button {
+  display: block;
+  margin: 0px auto;
+}
+.create-page .page-content .create-form {
+  padding: 20px;
+}
+.create-page .page-content .create-form .submit-button-container {
+  justify-content: flex-end;
+}
+.create-page .page-content .create-form .submit-button-container .submit-button {
+  width: 100%;
+}
+.create-page .page-content .create-form .input-style {
+  width: 100%;
+}
+.create-page .page-content .create-form .mat-error {
+  font-size: 12px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  background-color: #3b4a94;
+  border: 2px;
+  margin-top: 6%;
+  margin-left: 33%;
+  border-radius: 8px;
+  -moz-border-radius: 15px;
+  display: inline-block;
+  color: #fff;
+  width: 30%;
+  cursor: pointer;
+  padding: 1%;
+}
+
+/*  EDIT PAGES */
+.edit-page {
+  padding: 20px 35px;
+}
+.edit-page .page-content {
+  background-color: #fff;
+}
+.edit-page .page-content .img-avatar {
+  border-radius: 50%;
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+.edit-page .page-content .change-img-button {
+  display: block;
+  margin: 0px auto;
+}
+.edit-page .page-content .edit-form {
+  padding: 20px;
+}
+.edit-page .page-content .edit-form .submit-button-container {
+  justify-content: flex-end;
+}
+.edit-page .page-content .edit-form .submit-button-container .submit-button {
+  width: 100%;
+}
+.edit-page .page-content .edit-form .submit-button-container .delete-button {
+  width: 100%;
+}
+.edit-page .page-content .edit-form .input-style {
+  width: 100%;
+}
+.edit-page .page-content .edit-form .mat-error {
+  font-size: 12px;
+}

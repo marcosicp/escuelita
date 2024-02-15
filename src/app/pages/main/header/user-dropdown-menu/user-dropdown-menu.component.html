@@ -1,0 +1,44 @@
+<li class="nav-item dropdown user-menu">
+  <a
+    class="nav-link dropdown-toggle"
+    data-toggle="dropdown"
+    (click)="toggleDropdownMenu()"
+  >
+ 
+    <em style="font-size: xx-large;" class="fas fa-user"> </em>
+  </a>
+  <ul #dropdownMenu class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+    <!-- User image -->
+    <li class="user-header bg-primary">
+      <em style="font-size: xxx-large;" class="fas fa-user"> </em>
+      <p [innerHTML]="usuarioStr">
+        
+      </p>
+      <small>Usuario creado el: {{usuario.creado}}</small>
+    </li>
+    <!-- Menu Body -->
+    <li class="user-body">
+      <!-- <div class="row">
+        <div class="col-4 text-center">
+          <a href="#">Followers</a>
+        </div>
+        <div class="col-4 text-center">
+          <a href="#">Sales</a>
+        </div>
+        <div class="col-4 text-center">
+          <a href="#">Friends</a>
+        </div>
+      </div> -->
+      <!-- /.row -->
+    </li>
+    <!-- Menu Footer-->
+    <li class="user-footer">
+      <!-- <a [routerLink]="['/profile']" class="btn btn-default btn-flat">
+        Profile
+      </a> -->
+      <a (click)="logout()" class="btn btn-default btn-flat float-right"
+        >Salir</a
+      >
+    </li>
+  </ul>
+</li>

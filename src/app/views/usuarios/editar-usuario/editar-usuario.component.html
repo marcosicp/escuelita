@@ -1,0 +1,132 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Editar Usuario</h1>
+      </div>
+      <!-- <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">User Profile</li>
+              </ol>
+          </div> -->
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="create-page content">
+      <div class="page-content card card-primary card-outline">
+        <div class="edit-page">
+          <div class="page-content">
+            <div class="row">
+              <div class="col col-md-8 mx-auto">
+                <form class="edit-form" [formGroup]="usuarioForm" novalidate (ngSubmit)="onSubmit(usuarioForm.value)">
+                  <div class="form-group">
+                    <mat-form-field class="input-style">
+                      <input matInput placeholder="Email" class="form-control" formControlName="email" />
+                    </mat-form-field>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Nombre</mat-label>
+                          <input matInput type="text" placeholder="Nombre" class="form-control"
+                            formControlName="nombre" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Apellido</mat-label>
+                          <input matInput type="text" placeholder="Apellido" class="form-control"
+                            formControlName="apellido" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Edad</mat-label>
+                          <input matInput type="number" placeholder="Edad" class="form-control"
+                            formControlName="edad" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>DNI</mat-label>
+                          <input matInput type="number" placeholder="DNI" class="form-control" formControlName="dni" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Dirección</mat-label>
+                          <input matInput placeholder="Direccion" class="form-control" formControlName="direccion" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Teléfono Emergencia</mat-label>
+                          <input matInput placeholder="Telefono Emergencia" class="form-control"
+                            formControlName="telefonoEmergencia" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group">
+                        <mat-form-field class="input-style">
+                          <mat-label>Teléfono</mat-label>
+                          <input matInput placeholder="Telefono" class="form-control" formControlName="telefono" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <mat-label>Habilitado</mat-label>
+                    <mat-checkbox placeholder="habilitado" class="form-control" formControlName="habilitado">
+                    </mat-checkbox>
+                  </div>
+
+                  <div class="row submit-button-container">
+                    <div class="col-md-4">
+                      <button mat-raised-button class="submit-button" color="primary" type="submit"
+                        [disabled]="!usuarioForm.valid">
+                        Guardar
+                      </button>
+                    </div>
+                    <div class="col-md-4">
+                      <button mat-raised-button class="button" class="submit-button" type="button"
+                        (click)="backClicked()">
+                        Volver
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+<aside #mainSidebar class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a [routerLink]="['/']" class="brand-link">
+    <img src="/assets/logoEscuelita.webp" alt="Escuelita" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+    <span class="brand-text font-weight-light">Escuelita Admin</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user (optional) -->
+    <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img
+          src="assets/img/user2-160x160.jpg"
+          class="img-circle elevation-2"
+          alt="User Image"
+        />
+      </div>
+      <div class="info">
+        <a [routerLink]="['/profile']" class="d-block">Alexander Pierce</a>
+      </div>
+    </div> -->
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['']">
+            <i class="nav-icon fas fa-square"></i><span>Alumnos</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['usuarios']"><i class="nav-icon fas fa-user-alt"></i>
+            <span>Usuarios</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" [routerLink]="['empleados']"><i class="nav-icon fas fa-male"></i> <span>Equipo</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['productos']"><i class="nav-icon fas fa-bell"></i>
+            <span>Productos</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['muestras']"><i class="nav-icon fas fa-vials"></i>
+            <span>Muestras</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['encuestas']"><i class="nav-icon fas fa-chalkboard"></i>
+            <span>Encuestas</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['bolsas']"><i class="nav-icon fas fa-shopping-bag"></i>
+            <span>Bolsas</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['clasificacion']"><i class="nav-icon fas fa-check-square "></i>
+            <span>Clasificación</span></a>
+        </li> -->
+        <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['promos']"><i class="nav-icon fas fa-dollar-sign"></i> <span>Promos</span></a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['eventos']"><i class="nav-icon fas fa-bell"></i> <span>Eventos</span></a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['sumarme']"><i class="nav-icon fas fa-plus"></i> <span>Sumarme</span></a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['numeros-utiles']"><i class="nav-icon fas fa-phone-alt"></i> <span>Numeros Utiles</span></a></li> -->
+        <!-- <li><a [routerLink]="" style="color: white;" (click)="logout()"><i style="color: white;" class="fa fa-circle-o"></i>Salir</a></li> -->
+
+        <!-- <li class="nav-item">
+          <a [routerLink]="['/']" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/blank']" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Blank
+            </p>
+          </a>
+        </li> -->
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

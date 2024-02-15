@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+// .custom-file-upload {
+//   background-color: #3b4a94;
+//   // border: 1px solid #ccc;
+//   display: inline-block;
+//   width: 30%;
+//   cursor: pointer;
+//   padding: 1%;
+// }
+
+.custom-file-upload {
+  background-color: #3b4a94;
+  border: 2px;
+border-radius: 15px;
+-moz-border-radius: 15px;
+  display: inline-block;
+  width: 30%;
+  cursor: pointer;
+  padding: 1%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
